@@ -1,4 +1,5 @@
 import 'package:controlled_animations/controlled_animations_page.dart';
+import 'package:controlled_animations/exercise_one_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,6 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
           GoToListTileWidget(
             goTo: ControlledAnimationsPage(),
             title: '1 - Controlled Animations',
+          ),
+          GoToListTileWidget(
+            goTo: ExerciseOnePage(),
+            title: '2 - Exercise One',
           ),
         ],
       ),

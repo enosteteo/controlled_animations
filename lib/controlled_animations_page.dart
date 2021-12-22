@@ -47,17 +47,18 @@ class _ControlledAnimationsPageState extends State<ControlledAnimationsPage>
       ),
       body: Center(
         child: AnimatedBuilder(
-            animation: controller,
-            builder: (context, child) {
-              return GestureDetector(
-                onTap: () => toggle(),
-                child: Container(
-                  width: sizeAnimation.value?.width,
-                  height: sizeAnimation.value?.height,
-                  color: colorAnimation.value,
-                ),
-              );
-            }),
+          animation: controller,
+          builder: (context, child) {
+            return GestureDetector(
+              onTap: () => toggle(),
+              child: Container(
+                width: sizeAnimation.value?.width,
+                height: sizeAnimation.value?.height,
+                color: colorAnimation.value,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
