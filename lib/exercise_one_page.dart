@@ -61,19 +61,21 @@ class _ExerciseOnePageState extends State<ExerciseOnePage>
         animation: controller,
         builder: (context, child) {
           return Container(
+            padding: EdgeInsets.all(20),
             alignment: alignmentAnimation.value,
             child: AnimatedBuilder(
-                animation: controller,
-                builder: (context, child) {
-                  return GestureDetector(
-                    onTap: () => toggle(),
-                    child: Container(
-                      width: sizeAnimation.value?.width,
-                      height: sizeAnimation.value?.height,
-                      decoration: decorationAnimation.value,
-                    ),
-                  );
-                }),
+              animation: controller,
+              builder: (context, child) {
+                return GestureDetector(
+                  onTap: () => toggle(),
+                  child: Container(
+                    width: sizeAnimation.value?.width,
+                    height: sizeAnimation.value?.height,
+                    decoration: decorationAnimation.value,
+                  ),
+                );
+              },
+            ),
           );
         },
       ),
